@@ -14,13 +14,8 @@ export default function Desktop() {
           <li>help</li>
         </ul>
       </div>
-      <div className="w-[40%]">
-        <input
-          type="search"
-          name=""
-          id=""
-          className="w-full outline-none border-2 rounded-md"
-        />
+      <div className="w-[40%] border-gray-500 border-2 p-1 rounded-lg outline-none">
+        <input type="search" name="" id="" className="w-full outline-none " />
       </div>
 
       <div className="flex">

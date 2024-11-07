@@ -21,7 +21,7 @@ export default function Mobile() {
         </div>
       </div>
 
-      <div className="border-gray-500 border-2 rounded-md outline-none">
+      <div className="border-gray-500 border-2 p-2 rounded-md outline-none">
         <input type="search" name="" id="" className="outline-none w-full " />
       </div>
 

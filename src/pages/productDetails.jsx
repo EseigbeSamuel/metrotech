@@ -3,9 +3,13 @@ import React from "react";
 export default function ProductDetails() {
   return (
     <div>
-      <div>
-        <h1>productDetails page</h1>
-      </div>
+      <section>
+        <img src="" alt="" />
+      </section>
+      <section>
+        <h1>name</h1>
+        <div></div>
+      </section>
     </div>
   );
 }
