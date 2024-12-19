@@ -3,11 +3,11 @@ import Mobile from "./mobile";
 import Desktop from "./desktop";
 
 export default function Navbar() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 767);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 767);
+      setIsMobile(window.innerWidth < 767);
     };
 
     window.addEventListener("resize", handleResize);

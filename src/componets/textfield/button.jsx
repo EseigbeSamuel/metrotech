@@ -4,7 +4,7 @@ export default function Button({
   size = "medium",
   children,
   variant = "outline",
-  btnDisabled,
+  onClick,
 }) {
   const getBtnSize = () => {
     if (size === "medium") {
@@ -17,19 +17,18 @@ export default function Button({
   };
   const getBtnVariant = () => {
     if (variant === "contained") {
-      return btnDisabled ? "bg-black text-white" : "bg-black text-white";
+      return "bg-black text-white";
     } else if (variant === "outlined") {
       return "border-[1px] border-black text-black hover:bg-black hover:text-white";
     }
   };
 
   return (
-    <div>
-      <button
-        className={`h-[40px] ${getBtnSize()} ${getBtnVariant()} rounded-md font-semibold text-[15px]`}
-      >
-        {children}
-      </button>{" "}
-    </div>
+    <button
+      className={`h-[40px] ${getBtnSize()} ${getBtnVariant()} rounded-md font-semibold text-[15px]`}
+      onClick={onClick}
+    >
+      {children}
+    </button>
   );
 }

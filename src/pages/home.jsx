@@ -9,12 +9,15 @@ import Desktop2 from "../componets/acessorices/desktop";
 import Button from "../componets/textfield/button";
 import purple from "../images/puple cash.png";
 import bcorp from "../images/bcorp.png";
+import { productDB } from "../database/productDB";
 
 export default function Home() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
+  const [products, setProducts] = useState(productDB);
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 767);
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 767);
+      setIsMobile(window.innerWidth < 767);
     };
     window.addEventListener("resize", handleResize);
     return () => {
@@ -44,8 +47,17 @@ export default function Home() {
               The tech in everyone search bar
             </span>{" "}
           </h1>
-          <div>
-            <BestSeller />
+          <div className="flex gap-3 w-full overflow-x-scroll">
+            {products.map((item) => {
+              return (
+                <BestSeller
+                  title={item.title}
+                  price={item.price}
+                  id={item.id}
+                  key={item.id}
+                />
+              );
+            })}
           </div>
         </section>
         <section>youtube video</section>
@@ -121,6 +133,7 @@ export default function Home() {
             <div className="flex flex-col gap-2 w-full ">
               <div className="flex items-center">
                 <input
+                  placeholder="email"
                   type="email"
                   className="p-2 w-full  outline-none border-[1px] border-black rounded-lg "
                 />
@@ -132,6 +145,7 @@ export default function Home() {
           ) : (
             <div className="flex w-full justify-center gap-2">
               <input
+                placeholder="email"
                 type="email"
                 name=""
                 id=""

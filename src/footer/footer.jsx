@@ -4,7 +4,11 @@ import certified from "../images/Annotation 2024-03-06 105115.png";
 export default function Footer() {
   return (
     <div className="py-10 px-[30px] flex flex-col gap-5 md:items-center w-full  ">
-      <h1>end</h1>
+      <p className=" hidden md:flex">
+        Hello! We are metrotech,the leading marketplece for refurbished
+        devices.Our mission? To fight e-waste by giving expertly restored device
+        a second life
+      </p>
       <section className=" flex flex-col gap-[50px] justify-between md:flex-row">
         <div className="flex flex-col gap-5">
           <h1 className="text-2xl">About</h1>

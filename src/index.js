@@ -5,14 +5,20 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { NavClickProvider } from "./context/navContext";
 import { ThemeProvider } from "./context/themeContext";
+import { CartProvider } from "./context/cartContext";
+import { FilterProvider } from "./context/filterContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <NavClickProvider>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
+      <CartProvider>
+        <FilterProvider>
+          <ThemeProvider>
+            <App />
+          </ThemeProvider>
+        </FilterProvider>
+      </CartProvider>
     </NavClickProvider>
   </React.StrictMode>
 );

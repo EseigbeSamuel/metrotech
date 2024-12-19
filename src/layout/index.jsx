@@ -11,7 +11,7 @@ export default function Layout() {
       <Navbar />
       <div
         onClick={handleClose}
-        className=" bg-zinc-200 mt-[70px] md:mt-[90px] lg:mt-[70px] "
+        className=" bg-zinc-100 mt-[70px] md:mt-[90px] lg:mt-[70px] "
       >
         <Outlet />
       </div>
