@@ -16,17 +16,22 @@ const FilterContext = createContext();
 export const FilterProvider = ({ children }) => {
   const [filteredProducts, setFilteredProducts] = useState(productDB || []);
   const [sortOption, setSortOption] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
   // Function to filter products
   const filterProducts = (type) => {
-    if (type === "all") {
-      setFilteredProducts(productDB); // Show all products
-    } else {
-      const filtered = productDB.filter((product) => product.type === type);
-      setFilteredProducts(filtered);
-    }
-  };
+    const updatedProducts =
+      type === "all"
+        ? productDB
+        : productDB.filter((product) => product.type === type);
 
+    // Apply search filtering on top of category filtering
+    const finalProducts = updatedProducts.filter((product) =>
+      product.title.toLowerCase().includes(searchQuery)
+    );
+
+    setFilteredProducts(finalProducts);
+  };
   // Function to sort products
   const sortProducts = (option) => {
     setSortOption(option);
@@ -39,11 +44,30 @@ export const FilterProvider = ({ children }) => {
     });
     setFilteredProducts(sorted);
   };
-  console.log("ip", productDB);
-  console.log("fp", filteredProducts);
+
+  // Function to handle search input changes
+  const updateSearchQuery = (term) => {
+    setSearchQuery(term.toLowerCase()); // Convert to lowercase for case-insensitive matching
+
+    // Filter products based on the search query
+    const searchedProducts = productDB.filter((product) =>
+      product.title.startsWith(term.toLowerCase())
+    );
+
+    // Apply category filtering on top of search
+    setFilteredProducts(searchedProducts);
+  };
+
   return (
     <FilterContext.Provider
-      value={{ filteredProducts, filterProducts, sortProducts, sortOption }}
+      value={{
+        filteredProducts,
+        filterProducts,
+        sortProducts,
+        sortOption,
+        searchQuery,
+        updateSearchQuery,
+      }}
     >
       {children}
     </FilterContext.Provider>

@@ -3,11 +3,13 @@ import { FaBars } from "react-icons/fa";
 import { FaCartShopping, FaPerson, FaXmark } from "react-icons/fa6";
 import { useNavClickContext } from "../context/navContext";
 import { Link, useNavigate } from "react-router-dom";
+import { useFilterContext } from "../context/filterContext";
 
 export default function Mobile() {
   const navigate = useNavigate();
 
   const { click, handleClose, handleToggle } = useNavClickContext();
+  const { searchQuery, updateSearchQuery } = useFilterContext();
   return (
     <div className=" w-full h-full justify-center flex flex-col py-4 ">
       <div className="flex justify-between items-center text-xl ">
@@ -31,14 +33,18 @@ export default function Mobile() {
       </div>
 
       <div className="border-gray-500 border-2 p-1 rounded-md outline-none">
-        <form
-          action=""
-          onSubmit={() => {
-            navigate("/product");
-          }}
-        >
+        <form action="">
           {" "}
-          <input type="search" name="" id="" className="outline-none w-full " />
+          <input
+            type="search"
+            value={searchQuery}
+            onChange={(e) => {
+              updateSearchQuery(e.target.value);
+              navigate("/product");
+            }}
+            id=""
+            className="outline-none w-full "
+          />
         </form>
       </div>
 

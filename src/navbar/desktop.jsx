@@ -1,9 +1,12 @@
 import React from "react";
 import { FaCartShopping, FaPerson } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
+import { useFilterContext } from "../context/filterContext";
 
 export default function Desktop() {
   const navigate = useNavigate();
+  const { searchQuery, updateSearchQuery } = useFilterContext();
+
   return (
     <div className="flex w-full h-full justify-between items-center">
       <Link to={"/"}>
@@ -20,13 +23,18 @@ export default function Desktop() {
         </ul>
       </div>
       <div className="w-[40%] border-gray-500 border-2 p-1 rounded-lg outline-none">
-        <form
-          onSubmit={() => {
-            navigate("/product");
-          }}
-        >
+        <form>
           {" "}
-          <input type="search" name="" id="" className="w-full outline-none " />
+          <input
+            type="search"
+            value={searchQuery}
+            onChange={(e) => {
+              updateSearchQuery(e.target.value);
+              navigate("/product");
+            }}
+            id=""
+            className="w-full outline-none "
+          />
         </form>
       </div>
 

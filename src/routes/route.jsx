@@ -5,8 +5,6 @@ import Layout from "../layout";
 import ProductDetails from "../pages/productDetails";
 import ProductList from "../pages/productList";
 import Cart from "../pages/cart";
-import { CartProvider } from "../context/cartContext";
-import { FilterProvider } from "../context/filterContext";
 
 export default function Route() {
   const routes = createBrowserRouter([
@@ -27,11 +25,7 @@ export default function Route() {
   ]);
   return (
     <div>
-      <FilterProvider>
-        <CartProvider>
-          <RouterProvider router={routes} />
-        </CartProvider>
-      </FilterProvider>
+      <RouterProvider router={routes} />
     </div>
   );
 }

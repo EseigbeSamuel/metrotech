@@ -1,8 +1,8 @@
 export const productDB = [
   {
     id: 1,
-    title: " xbox series s",
-    price: "100",
+    title: "xbox series s",
+    price: "100.64",
     oldprice: "200",
     brand: "xbox",
     description: "",
@@ -14,7 +14,7 @@ export const productDB = [
   {
     id: 2,
     title: "iphone xr",
-    price: "150",
+    price: "150.77",
     oldprice: "300",
     brand: "apple",
     description: "",
@@ -26,7 +26,7 @@ export const productDB = [
   {
     id: 3,
     title: "samsung s10",
-    price: "530",
+    price: "530.32",
     oldprice: "1,000",
     brand: "samsung",
     description: "",
@@ -38,7 +38,7 @@ export const productDB = [
   {
     id: 4,
     title: "iphone 11",
-    price: "210",
+    price: "210.00",
     oldprice: "400",
     brand: "apple",
     description: "",
@@ -50,7 +50,7 @@ export const productDB = [
   {
     id: 5,
     title: "iphone 11 pro max",
-    price: "340",
+    price: "340.12",
     oldprice: "600",
     brand: "apple",
     description: "",
@@ -74,7 +74,7 @@ export const productDB = [
   {
     id: 7,
     title: "imac",
-    price: "510",
+    price: "510.87",
     oldprice: "1,000",
     brand: "apple",
     description: "",
@@ -86,7 +86,7 @@ export const productDB = [
   {
     id: 8,
     title: "samsung s21",
-    price: "150",
+    price: "150.99",
     oldprice: "300",
     brand: "samsung",
     description: "",
@@ -98,7 +98,7 @@ export const productDB = [
   {
     id: 9,
     title: "samsung s21 ultra",
-    price: "250",
+    price: "250.99",
     oldprice: "500",
     brand: "samsung",
     description: "",
@@ -111,7 +111,7 @@ export const productDB = [
   {
     id: 10,
     title: "samsung s22 ultra",
-    price: "348",
+    price: "348.22",
     oldprice: "600",
     brand: "samsung",
     description: "",
@@ -123,7 +123,7 @@ export const productDB = [
   {
     id: 11,
     title: "playstation 4",
-    price: "300",
+    price: "300.10",
     oldprice: "600",
     brand: "sony",
     description: "",
@@ -135,7 +135,7 @@ export const productDB = [
   {
     id: 12,
     title: "samsung s23 ultra",
-    price: "450",
+    price: "450.77",
     oldprice: "900",
     brand: "samsung",
     description: "",
@@ -147,7 +147,7 @@ export const productDB = [
   {
     id: 13,
     title: "samsung s24 ultra",
-    price: "1,000",
+    price: "999.99",
     oldprice: "2,000",
     brand: "samsung",
     description: "",
@@ -159,7 +159,7 @@ export const productDB = [
   {
     id: 14,
     title: "playstation 5",
-    price: "320",
+    price: "320.43",
     oldprice: "640",
     brand: "sony",
     description: "",
@@ -171,7 +171,7 @@ export const productDB = [
   {
     id: 15,
     title: "macbook air",
-    price: "470",
+    price: "470.44",
     oldprice: "1,000",
     brand: "apple",
     description: "",
@@ -183,7 +183,7 @@ export const productDB = [
   {
     id: 16,
     title: "macbook pro",
-    price: "680",
+    price: "680.90",
     oldprice: "1,200",
     brand: "apple",
     description: "",
@@ -195,7 +195,7 @@ export const productDB = [
   {
     id: 17,
     title: "dell xps",
-    price: "230",
+    price: "230.50",
     oldprice: "700",
     brand: "windows",
     description: "",
@@ -207,7 +207,7 @@ export const productDB = [
   {
     id: 18,
     title: "hp elitebook",
-    price: "230",
+    price: "230.80",
     oldprice: "300",
     brand: "windows",
     description: "",
@@ -219,7 +219,7 @@ export const productDB = [
   {
     id: 19,
     title: "ipad air",
-    price: "650",
+    price: "650.69",
     oldprice: "1,450",
     brand: "apple",
     description: "",
@@ -231,7 +231,7 @@ export const productDB = [
   {
     id: 20,
     title: "ipad pro",
-    price: "750",
+    price: "750.10",
     oldprice: "1,200",
     brand: "apple",
     description: "",

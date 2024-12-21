@@ -12,8 +12,6 @@ import bcorp from "../images/bcorp.png";
 import { productDB } from "../database/productDB";
 
 export default function Home() {
-  const [products, setProducts] = useState(productDB);
-
   const [isMobile, setIsMobile] = useState(window.innerWidth < 767);
   useEffect(() => {
     const handleResize = () => {
@@ -48,7 +46,7 @@ export default function Home() {
             </span>{" "}
           </h1>
           <div className="flex gap-3 w-full overflow-x-scroll">
-            {products.map((item) => {
+            {productDB.map((item) => {
               return (
                 <BestSeller
                   title={item.title}
